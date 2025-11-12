@@ -133,6 +133,7 @@
             this.Controls.Add(this.txtInputText);
             this.Name = "frmWordCharAnalyzer";
             this.Text = "WordCharAnalyzer";
+            this.Load += new System.EventHandler(this.frmWordCharAnalyzer_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

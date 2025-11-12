@@ -15,8 +15,7 @@ namespace WordCharAnalyzer
     {
         public int CharCount(string text, string search)
         {
-            if (string.IsNullOrEmpty(text) || string.IsNullOrEmpty(search))
-                return 0;
+           
             int count = 0;
             foreach (char c in text)
             {
@@ -28,10 +27,8 @@ namespace WordCharAnalyzer
         }
         public string WordList(string text, string search)
         {
-            if(string.IsNullOrEmpty(text))
-                return string.Empty;
             string result = "";
-            string[] words = text.Split(' ');
+           var words = text.Split(' ');
 
             for (int i = 0; i < words.Length; i++)
             {
@@ -49,9 +46,9 @@ namespace WordCharAnalyzer
         }
         public int WordCount(string text, string search)
         {
-            var word = text.Split(' ');
+            var words = text.Split(' ');
             var count = 0;
-            foreach (var item in word)
+            foreach (var item in words)
             {
                 if (item.IndexOf(search, StringComparison.OrdinalIgnoreCase) >= 0)
                     count++;
@@ -110,6 +107,6 @@ namespace WordCharAnalyzer
             txtLetterCountResult.Text = count.ToString();
         }
 
-      
+       
     }
 }
