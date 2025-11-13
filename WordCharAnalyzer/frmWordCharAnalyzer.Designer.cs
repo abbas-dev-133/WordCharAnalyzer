@@ -122,7 +122,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(295, 304);
+            this.ClientSize = new System.Drawing.Size(294, 317);
             this.Controls.Add(this.lblWordList);
             this.Controls.Add(this.txtWordCountResult);
             this.Controls.Add(this.txtLetterCountResult);
@@ -133,7 +133,6 @@
             this.Controls.Add(this.txtInputText);
             this.Name = "frmWordCharAnalyzer";
             this.Text = "WordCharAnalyzer";
-           // this.Load += new System.EventHandler(this.frmWordCharAnalyzer_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
