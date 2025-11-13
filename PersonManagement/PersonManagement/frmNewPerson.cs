@@ -12,29 +12,32 @@ namespace PersonManagement
 {
     public partial class frmNewPerson : Form
     {
-        bool ValidateInput()
+        bool ValidateInput(out string errorMessage)
         {
+            errorMessage = string.Empty;
+
             if (string.IsNullOrWhiteSpace(txtName.Text) ||
-        string.IsNullOrWhiteSpace(txtFamilyName.Text))
+                string.IsNullOrWhiteSpace(txtFamilyName.Text))
             {
-                MessageBox.Show("لطفا همه فیلدها را پر کنید.", "خطا",
-                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                errorMessage = "لطفا همه فیلدها را پر کنید.";
                 return false;
             }
+
             if (!rbMale.Checked && !rbFemale.Checked)
             {
-                MessageBox.Show("لطفا جنسیت را انتخاب کنید", "خطا",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                errorMessage = "لطفا جنسیت را انتخاب کنید.";
                 return false;
             }
+
             if (string.IsNullOrWhiteSpace(txtNationalCode.Text) || txtNationalCode.Text.Length != 10)
             {
-                MessageBox.Show("لطفا کد ملی معتبر ۱۰ رقمی وارد کنید.", "خطا",
-                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                errorMessage = "لطفا کد ملی معتبر ۱۰ رقمی وارد کنید.";
                 return false;
             }
+
             return true;
         }
+
         public frmNewPerson()
         {
             InitializeComponent();
@@ -42,7 +45,11 @@ namespace PersonManagement
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (!ValidateInput()) return;
+            if (!ValidateInput(out string errorMessage))
+            {
+                MessageBox.Show(errorMessage, "خطا", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             var people = new Person();
             people.Name = txtName.Text;
             people.FamilyName = txtFamilyName.Text;
