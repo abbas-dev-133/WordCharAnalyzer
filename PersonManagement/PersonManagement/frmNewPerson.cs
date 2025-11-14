@@ -63,11 +63,11 @@ namespace PersonManagement
             else
                 people.Gender = GenderType.Unknown;
 
-            var FrmPerson= Application.OpenForms[nameof(frmPerson)] as frmPerson;
-            if (FrmPerson != null)
+            var frmPerson= Application.OpenForms[nameof(FrmPerson)] as FrmPerson;
+            if (frmPerson != null)
             {
-                FrmPerson.people.Add(people);
-                FrmPerson.FillDGV();
+                frmPerson.people.Add(people);
+                frmPerson.FillDGV();
             }
             this.Close();
 

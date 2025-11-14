@@ -1,6 +1,6 @@
 ﻿namespace PersonManagement
 {
-    partial class frmPerson
+    partial class FrmPerson
     {
         /// <summary>
         /// Required designer variable.

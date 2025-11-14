@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace PersonManagement
 {
-    public partial class frmPerson : Form
+    public partial class FrmPerson : Form
     {
         public List<Person> people = new List<Person>();
-        public frmPerson()
+        public FrmPerson()
         {
             InitializeComponent();
         }
