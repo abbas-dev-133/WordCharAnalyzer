@@ -45,7 +45,8 @@ namespace PersonManagement
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (!ValidateInput(out string errorMessage))
+            bool isValid = ValidateInput(out string errorMessage);
+            if (! isValid)
             {
                 MessageBox.Show(errorMessage, "خطا", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -62,11 +63,11 @@ namespace PersonManagement
             else
                 people.Gender = GenderType.Unknown;
 
-            var frmPerson = Application.OpenForms["frmPerson"] as frmPerson;
-            if (frmPerson != null)
+            var FrmPerson= Application.OpenForms[nameof(frmPerson)] as frmPerson;
+            if (FrmPerson != null)
             {
-                frmPerson.people.Add(people);
-                frmPerson.FillDGV();
+                FrmPerson.people.Add(people);
+                FrmPerson.FillDGV();
             }
             this.Close();
 
