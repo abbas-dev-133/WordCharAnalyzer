@@ -12,7 +12,7 @@ namespace PersonManagement
 {
     public partial class FrmPerson : Form
     {
-        public List<Person> people = new List<Person>();
+        public List<Person> persons = new List<Person>();
         public FrmPerson()
         {
             InitializeComponent();
@@ -21,7 +21,7 @@ namespace PersonManagement
         public void FillDgv()
         {
             dgvShowPerson.DataSource = null;
-            dgvShowPerson.DataSource = people.ToList();
+            dgvShowPerson.DataSource = persons.ToList();
         }
 
         private void btnInsert_Click(object sender, EventArgs e)
@@ -52,7 +52,7 @@ namespace PersonManagement
                  );
                 if (result == DialogResult.Yes)
                 {
-                    people.Remove(personToDelete);
+                    persons.Remove(personToDelete);
                     FillDgv();
                 }
             }

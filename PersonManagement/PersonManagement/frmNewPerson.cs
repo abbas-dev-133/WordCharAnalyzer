@@ -51,7 +51,7 @@ namespace PersonManagement
 			if (frmPerson != null)
 			{
 				if(isNew)
-				frmPerson.people.Add(person);
+				frmPerson.persons.Add(person);
 
 				frmPerson.FillDgv();
 			}
