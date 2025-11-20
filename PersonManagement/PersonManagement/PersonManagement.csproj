@@ -47,11 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmNewPerson.cs">
+    <Compile Include="FrmNewPerson.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNewPerson.Designer.cs">
-      <DependentUpon>frmNewPerson.cs</DependentUpon>
+    <Compile Include="FrmNewPerson.Designer.cs">
+      <DependentUpon>FrmNewPerson.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmPerson.cs">
       <SubType>Form</SubType>
@@ -59,13 +59,13 @@
     <Compile Include="FrmPerson.Designer.cs">
       <DependentUpon>FrmPerson.cs</DependentUpon>
     </Compile>
-    <Compile Include="NationalCodeExtentionMethod.cs" />
+    <Compile Include="NationalCodeValidator.cs" />
     <Compile Include="OperationResult.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmNewPerson.resx">
-      <DependentUpon>frmNewPerson.cs</DependentUpon>
+    <EmbeddedResource Include="FrmNewPerson.resx">
+      <DependentUpon>FrmNewPerson.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPerson.resx">
       <DependentUpon>FrmPerson.cs</DependentUpon>

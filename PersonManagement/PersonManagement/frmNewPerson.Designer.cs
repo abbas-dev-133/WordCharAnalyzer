@@ -1,6 +1,6 @@
 ﻿namespace PersonManagement
 {
-    partial class frmNewPerson
+    partial class FrmNewPerson
     {
         /// <summary>
         /// Required designer variable.
@@ -155,6 +155,7 @@
             this.MinimumSize = new System.Drawing.Size(444, 429);
             this.Name = "frmNewPerson";
             this.Text = "frmNewPerson";
+            this.Load += new System.EventHandler(this.frmNewPerson_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

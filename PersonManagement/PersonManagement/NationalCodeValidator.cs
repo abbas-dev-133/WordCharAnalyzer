@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PersonManagement
 {
-    public static class NationalCodeExtentionMethod
+    public static class NationalCodeValidator
     {
         public static OperationResult NationalCodeValidate(this string nationalCode)
         {
@@ -44,7 +44,7 @@ namespace PersonManagement
                         result.IsSuccess = false;
                         result.Message = "کد ملی معتبر نیست.";
                         return result; 
-                        break;
+                    
                 }
                 int num3 = ((((((((numArray[0] * 10) + (numArray[1] * 9)) + (numArray[2] * 8)) + (numArray[3] * 7)) + (numArray[4] * 6)) + (numArray[5] * 5)) + (numArray[6] * 4)) + (numArray[7] * 3)) + (numArray[8] * 2);
                 int num4 = num3 - ((num3 / 11) * 11);

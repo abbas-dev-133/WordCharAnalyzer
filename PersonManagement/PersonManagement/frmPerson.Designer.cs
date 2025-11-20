@@ -31,6 +31,7 @@
             this.dgvShowPerson = new System.Windows.Forms.DataGridView();
             this.btnInsert = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvShowPerson)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,17 +68,29 @@
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // frmPerson
+            // btnEdit
+            // 
+            this.btnEdit.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnEdit.Location = new System.Drawing.Point(272, 12);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(75, 23);
+            this.btnEdit.TabIndex = 1;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // FrmPerson
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(534, 423);
+            this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnInsert);
             this.Controls.Add(this.dgvShowPerson);
             this.MaximumSize = new System.Drawing.Size(550, 462);
             this.MinimumSize = new System.Drawing.Size(550, 462);
-            this.Name = "frmPerson";
+            this.Name = "FrmPerson";
             this.Text = "frmPerson";
             this.Load += new System.EventHandler(this.frmPerson_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvShowPerson)).EndInit();
@@ -90,6 +103,7 @@
         private System.Windows.Forms.DataGridView dgvShowPerson;
         private System.Windows.Forms.Button btnInsert;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnEdit;
     }
 }
 
