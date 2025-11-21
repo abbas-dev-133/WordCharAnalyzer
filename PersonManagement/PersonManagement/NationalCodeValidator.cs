@@ -8,7 +8,7 @@ namespace PersonManagement
 {
     public static class NationalCodeValidator
     {
-        public static OperationResult NationalCodeValidate(this string nationalCode)
+        public static OperationResult IsValidNationalCode(this string nationalCode)
         {
             var result = new OperationResult();
 
